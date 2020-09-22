@@ -8,3 +8,4 @@ This is 2nd edit from Feature1 branch
 This is 3rd edit from Feature1 branch
 This is 4th edit from Feature1 branch
 This is 5th edit from Feature1 branch
+This is 2nd edit from HotFix branch
