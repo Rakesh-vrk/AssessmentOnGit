@@ -1,0 +1,121 @@
+1  mkdir AssessmentOnGit
+    2  cd AssessmentOnGit/
+    3  git init
+    4  echo "This is 1st edit from production branch" > demo.txt
+    5  git add demo.txt 
+    6  git commit -m "***Production 1st commit"
+    7  git branch Production
+    8  git checkout Production
+    9  git log --oneline
+   10  git branch Integration
+   11  git branch HotFix
+   12  git checkout Integration
+   13  git log --oneline
+   14  echo "This is 1st edit from Integration branch" >> demo.txt
+   15  clear
+   16  cat demo.txt 
+   17  git add demo.txt 
+   18  git commit -m "***Integration 1st commit"
+   19  git branch Feature1
+   20  git branch Feature2
+   21  git log --oneline
+   22  git checkout Feature2
+   23  git log --oneline
+   24  echo "This is 1st edit from Feature2 branch" >> demo.txt
+   25  git add demo.txt 
+   26  clear
+   27  git commit -m "***Feature2 1st commit"
+   28  echo "This is 2nd edit from Feature2 branch" >> demo.txt
+   29  git add demo.txt 
+   30  git commit -m "***Feature2 2nd commit"
+   31  echo "This is 3rd edit from Feature2 branch" >> demo.txt
+   32  git add demo.txt 
+   33  git commit -m "***Feature2 3rd commit"
+   34  git log --oneline
+   35  git checkout Integration
+   36  git merge Feature2
+   37  git log --oneline
+   38  git checkout HotFix
+   39  clear
+   40  git log --oneline
+   41  git merge Integration
+   42  git log --oneline
+   43  git checkout Production
+   44  git log --oneline
+   45  echo "This is 2nd edit from production branch" >> demo.txt
+   46  git add demo.txt 
+   47  git commit -m "***Production 2nd commit"
+   48  git merge HotFix
+   49  vi demo.txt 
+   50  clear
+   51  git add demo.txt 
+   52  git commit -m "***Production 3rd commit - merged HotFix"
+   53  git log --oneline
+   54  git checkout Feature1
+   55  git log --oneline
+   56  echo "This is 1st edit from Feature1 branch" >> demo.txt
+   57  git add demo.txt 
+   58  git commit -m "***Feature1 1st commit - merged HotFix"
+   59  git commit --amend
+   60  git log --oneline
+   61  clear
+   62  echo "This is 2nd edit from Feature1 branch" >> demo.txt
+   63  cat demo.txt 
+   64  git add demo.txt 
+   65  git commit -m "***Feature1 2nd commit"
+   66  echo "This is 3rd edit from Feature1 branch" >> demo.txt
+   67  git add demo.txt 
+   68  git commit -m "***Feature1 3rd commit"
+   69  echo "This is 4th edit from Feature1 branch" >> demo.txt
+   70  git add demo.txt 
+   71  git commit -m "***Feature1 4th commit"
+   72  git rebase Integration
+   73  clear
+   74  vi demo.txt 
+   75  cat demo.txt 
+   76  git log --oneline
+   77  git branch
+   78  git add demo.txt 
+   79  git rebase --continue
+   80  git log --oneline
+   81  git branch 
+   82  vi demo.txt 
+   83  git checkout Integration
+   84  git log --oneline
+   85  git merge Feature1
+   86  git log --oneline
+   87  git checkout Feature1
+   88  echo "This is 5th edit from Feature1 branch" >> demo.txt
+   89  git add demo.txt 
+   90  git add demo.txt 
+   91  git commit -m "***Feature1 5th commit"
+   92  git checkout Integration
+   93  git merge Feature1
+   94  git log --oneline
+   95  cat demo.txt 
+   96  git checkout HotFix
+   97  git log --oneline
+   98  git merge Integration
+   99  git log --oneline
+  100  git checkout Production
+  101  git log --oneline
+  102  git merge HotFix
+  103  git log --oneline
+  104  git checkout HotFix
+  105  git log --oneline
+  106  echo "This is 2nd edit from HotFix branch" >> demo.txt
+  107  git add demo.txt 
+  108  git commit -m "***HotFix 2nd commit"
+  109  git log --oneline
+  110  git checkout Integration
+  111  git merge HotFix
+  112  git log --oneline
+  113  git checkout Production
+  114  git merge HotFix
+  115  git log --oneline
+  116  git remote add origin https://github.com/Rakesh-vrk/AssessmentOnGit.git
+  117  git push origin master
+  118  git push origin Production
+  119  git branch -M Production
+  120  git push origin Production
+
